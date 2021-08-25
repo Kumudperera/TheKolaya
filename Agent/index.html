@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>තේ කොළය</title>
+        <link rel = "icon" href = "imgs/thekolaya2.png" type = "image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a8f32993e8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <nav>
+                <div class="nav-bar-left">
+                    <ul>
+                        <li class="nav home">
+                            <div>
+                                <a href="#"><i class="fas fa-home"></i> HOME</a>
+                            </div>
+                        </li>
+                        <li class="nav notification">
+                            <div>
+                                <a href="#"><i class="fas fa-bell"></i> NOTIFICATION</a>
+                            </div>
+                        </li>    
+                    </ul>
+                </div>
+                
+                <div class="nav-bar-right">
+                    <ul>
+                        <li class="nav profile">
+                            <div>
+                                <a href="#"><i class="fas fa-user"></i> PROFILE</a>
+                            </div>
+                        </li>
+        
+                        <li class="nav logout">
+                            <div>
+                                <a href="#"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="thekolaya-div">
+                <img src="imgs/thekolaya.png" alt="" class="thekolaya">
+            </div>
+            <div class="mobile-nav-icon" id="open">
+                <i class="fas fa-align-justify" onclick="togglemenu()"></i>
+            </div>
+            <div class="mobile-nav-icon" id="close">
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </div>
+
+            <div class="mobile-nav-bar">
+                <ul>
+                    <li class="mobile home">
+                        <div>
+                            <a href="#"><i class="fas fa-home"></i> HOME</a>
+                        </div>
+                    </li>
+                    <li class="mobile profile">
+                        <div>
+                            <a href="#"><i class="fas fa-user"></i> PROFILE</a>
+                        </div>
+                    </li>
+                    <li class="mobile logout">
+                        <div>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+                        </div>
+                    </li>
+                    
+                    <li class="mobile notification">
+                        <div>
+                            <a href="#"><i class="fas fa-bell"></i> NOTIFICATION</a>
+                        </div>
+                    </li> 
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="middle-container">
+            <h1>I'M THE COLLECTOR</h1>
+            <hr>
+            
+            <div class="img-btn-container" id="middle-img-btn-container">
+                <div class="img-btn-container top" id="img-btn-top">
+                    <div class="container top left">
+                        <img src="imgs/1.jpg" alt="">
+                        <div class="btn-container top-left">
+                            <button class="btn btn-available"><i class="fas fa-align-justify"></i></i> AVAILABLE LIST</button>
+                        </div>
+                    </div>
+
+                    <div class="container top right" id="btn-top-right">
+                        <img src="imgs/2.jpg" alt="">
+                        <div class="btn-container top-right">
+                            <button class="btn btn-tea"><i class="fas fa-leaf"></i>TEA</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-btn-container bottom" id="img-btn-bottom">
+                    <div class="container bottom left">
+                        <img src="imgs/3.jpg" alt="">
+                        <div class="btn-container bottom-left">
+                            <button class="btn btn-confirm"><i class="fas fa-shopping-cart"></i>CONFIRM</button>
+                        </div>
+                    </div>
+
+                    <div class="container bottom right" id="btn-bottom-right">
+                        <img src="imgs/4.jpg" alt="">
+                        <div class="btn-container bottom-right">
+                            <button class="btn btn-emergency"><i class="fas fa-concierge-bell"></i>EMERGENCY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-img-btn-container">
+                <div class="container">
+                    <img src="imgs/1.jpg" alt="">
+                    <div class="btn-container">
+                        <button class="btn btn-available"><i class="fas fa-align-justify"></i></i> AVAILABLE</button>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="imgs/2.jpg" alt="">
+                    <div class="btn-container">
+                        <button class="btn btn-tea"><i class="fas fa-leaf"></i>TEA</button>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="imgs/3.jpg" alt="">
+                    <div class="btn-container">
+                        <button class="btn btn-confirm"><i class="fas fa-shopping-cart"></i>CONFIRM</button>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="imgs/4.jpg" alt="">
+                    <div class="btn-container">
+                        <button class="btn btn-emergency"><i class="fas fa-concierge-bell"></i>EMERGENCY</button>
+                    </div>
+                </div>
+            </div>
+            <hr id="hr-bottom">
+        </div>
+
+        <div class="bottom-container">
+            <ul>
+                <li>
+                    <a href="#">PRIVACY POLICY</a>
+                </li>
+
+                <li>
+                    <a href="#">ABOUT US</a>
+                </li>
+
+                <li>
+                    <a href="#">CONTACT US</a>
+                </li>
+
+                <li class="social-icons">
+                    <i class="fab fa-facebook" id="facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-twitter"></i>
+                </li>
+            </ul>
+        </div>
+        <script>
+            var topContainer = document.querySelector('.top-container');
+            var mobileNav = document.querySelector('.mobile-nav-bar ');
+            var navClose = document.getElementById('close');
+            var navOpen = document.getElementById('open');
+            function togglemenu() {
+                mobileNav.style.display = "inline-block";
+                topContainer.style.marginBottom = "350px";
+                navOpen.style.display = "none";
+                navClose.style.display = "inline-block";
+            }
+
+            function closemenu() {
+                navClose.style.display = "none";
+                navOpen.style.display = "inline-block";
+                mobileNav.style.display = "none";
+                topContainer.style.marginBottom = "0px";
+            }
+            function myFunction(x) {
+            if (x.matches){
+                document.querySelector('.mobile-nav-bar ').style.display = "none";
+                document.querySelector('.top-container').style.marginBottom = "0px";
+                document.getElementById('open').style.display = "none";
+                document.getElementById('close').style.display = "none";              
+            }else {
+                document.getElementById('open').style.display = "inline-block";
+            }
+            }
+
+            var x = window.matchMedia('(min-width: 950px)');
+            myFunction(x);
+            x.addListener(myFunction);
+
+        </script>
+    </body>
+</html>

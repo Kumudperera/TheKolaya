@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Supervisor</title>
+        <link rel = "icon" href = "imgs/thekolaya2.png" type = "image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a8f32993e8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <nav>
+                <div class="nav-bar-left">
+                    <ul>
+                        <li class="nav home">
+                            <div>
+                                <a href="#"><i class="fas fa-home"></i> HOME</a>
+                            </div>
+                        </li>
+                        <li class="nav notification">
+                            <div>
+                                <a href="#"><i class="fas fa-bell"></i> NOTIFICATION</a>
+                            </div>
+                        </li>    
+                    </ul>
+                </div>
+                
+                <div class="nav-bar-right">
+                    <ul>
+                        <li class="nav profile">
+                            <div>
+                                <a href="#"><i class="fas fa-user"></i> PROFILE</a>
+                            </div>
+                        </li>
+        
+                        <li class="nav logout">
+                            <div>
+                                <a href="#"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="thekolaya-div">
+                <img src="imgs/thekolaya.png" alt="" class="thekolaya">
+            </div>
+            <div class="mobile-nav-icon" id="open">
+                <i class="fas fa-align-justify" onclick="togglemenu()"></i>
+            </div>
+            <div class="mobile-nav-icon" id="close">
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </div>
+
+            <div class="mobile-nav-bar" id="#mnb">
+                <ul>
+                    <li class="mobile home">
+                        <div>
+                            <a href="#"><i class="fas fa-home"></i> HOME</a>
+                        </div>
+                    </li>
+                    <li class="mobile profile">
+                        <div>
+                            <a href="#"><i class="fas fa-user"></i> PROFILE</a>
+                        </div>
+                    </li>
+                    
+                    <li class="mobile notification">
+                        <div>
+                            <a href="#"><i class="fas fa-bell"></i> NOTIFICATION</a>
+                        </div>
+                    </li>
+
+                    <li class="mobile logout">
+                        <div>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="middle-container">
+            <h1>GOOD SUPPERVISOR</h1>
+            <hr>
+            
+            <div class="img-btn-container">
+                <div class="left">
+                    <img src="imgs/1.jpg" alt="Image-1">
+                </div>
+
+                <div class="right">
+                    <img src="imgs/2.jpg" alt="Image-2">
+                </div>
+
+                <div class="btn-list">
+                    <button class="btn btn-land"><i class="fas fa-user"></i> LAND OWNERS</button>
+    
+                    <button class="btn btn-fertilizer"><i class="fas fa-tree"></i> FERTILIZER</button>
+    
+                    <button class="btn btn-firewood"><i class="fas fa-fire"></i> FIREWOOD</button>
+    
+                    <button class="btn btn-request"><i class="fas fa-question"></i> REQUESTS </button>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+
+        <div class="bottom-container">
+            <ul>
+                <li>
+                    <a href="#">PRIVACY POLICY</a>
+                </li>
+
+                <li>
+                    <a href="#">ABOUT US</a>
+                </li>
+
+                <li>
+                    <a href="#">CONTACT US</a>
+                </li>
+
+                <li class="social-icons">
+                    <i class="fab fa-facebook" id="facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-twitter"></i>
+                </li>
+            </ul>
+        </div>
+        <script>
+            var topContainer = document.querySelector('.top-container');
+            var mobileNav = document.querySelector('.mobile-nav-bar');
+            var navClose = document.getElementById('close');
+            var navOpen = document.getElementById('open');
+            function togglemenu() {
+                mobileNav.style.display = "inline-block";
+                topContainer.style.marginBottom = "350px";
+                navOpen.style.display = "none";
+                navClose.style.display = "inline-block";
+            }
+
+            function closemenu() {
+                navClose.style.display = "none";
+                navOpen.style.display = "inline-block";
+                mobileNav.style.display = "none";
+                topContainer.style.marginBottom = "0px";
+            }
+            function myFunction(x) {
+            if (x.matches){
+                document.querySelector('.mobile-nav-bar').style.display = "none";
+                document.querySelector('.top-container').style.marginBottom = "0px";
+                document.getElementById('open').style.display = "none";
+                document.getElementById('close').style.display = "none";              
+            }else {
+                document.getElementById('open').style.display = "inline-block";
+            }
+            }
+
+            var x = window.matchMedia('(min-width: 950px)');
+            myFunction(x);
+            x.addListener(myFunction);
+
+        </script>
+    </body>
+</html>
